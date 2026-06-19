@@ -6,31 +6,60 @@
 <title>Gear & Tools | MinearWorks — Field-Tested by Doug Minear</title>
 <meta name="description" content="Tools, meters, and gear tested on the job for 25 years. No sponsors, no showroom. Field experience only. Amazon affiliate links.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400&family=Share+Tech+Mono&family=Barlow:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700&family=Share+Tech+Mono&family=Barlow:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#0a0f18;--navy2:#111c2b;--gold:#D4AF37;--gold2:#f0cc50;--copper:#B87333;--ember:#E05C1A;--teal:#40C8E0;--white:#f0ead8;--dim:#8a9ab0;--line:rgba(212,175,55,0.15);--grid:rgba(212,175,55,0.04)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
 body{background:var(--navy);color:var(--white);font-family:'Barlow',sans-serif;font-weight:300;overflow-x:hidden}
 body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
+
+/* NAV */
 nav{position:sticky;top:0;z-index:100;height:54px;display:flex;justify-content:space-between;align-items:center;padding:0 20px;background:rgba(8,12,20,.97);backdrop-filter:blur(16px);border-bottom:2px solid var(--gold)}
 .logo{font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:.16em;color:var(--gold);text-decoration:none}
 .logo span{color:var(--dim)}
 .nav-links{display:flex;gap:14px}
 .nav-links a{font-family:'Share Tech Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .2s}
 .nav-links a:hover,.nav-links a.active{color:var(--gold)}
-.hero{position:relative;z-index:1;padding:44px 20px 36px;text-align:center;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(212,175,55,.06) 0%,transparent 100%)}
+
+/* HERO */
+.hero{position:relative;z-index:1;padding:44px 20px 28px;text-align:center;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(212,175,55,.06) 0%,transparent 100%)}
 .hero-tag{font-family:'Share Tech Mono',monospace;font-size:.62rem;letter-spacing:.28em;color:var(--copper);text-transform:uppercase;margin-bottom:12px}
 .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,10vw,5rem);letter-spacing:.06em;line-height:.95;color:var(--white)}
 .hero h1 em{font-style:normal;color:var(--gold)}
 .hero-sub{font-family:'Barlow Condensed',sans-serif;font-size:.95rem;letter-spacing:.06em;color:var(--dim);margin:14px auto 0;max-width:420px;line-height:1.55}
 .hero-line{width:48px;height:2px;background:var(--gold);margin:20px auto 0}
 .disclaimer{font-family:'Share Tech Mono',monospace;font-size:.54rem;letter-spacing:.08em;color:rgba(200,191,160,.45);margin-top:14px;line-height:1.6}
+
+/* QUICK PICKS */
+.qp-section{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:32px 16px 0}
+.qp-header{text-align:center;margin-bottom:20px}
+.qp-tag{font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.28em;color:var(--ember);text-transform:uppercase;margin-bottom:8px}
+.qp-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,7vw,3.2rem);letter-spacing:.06em;line-height:.95;color:var(--white)}
+.qp-title em{font-style:normal;color:var(--ember)}
+.qp-sub{font-family:'Barlow Condensed',sans-serif;font-size:.85rem;color:var(--dim);margin-top:10px;line-height:1.5}
+.qp-line{width:48px;height:2px;background:var(--ember);margin:14px auto 0;animation:lineExpand 2s ease-in-out infinite alternate}
+@keyframes lineExpand{from{width:48px}to{width:100px}}
+.qp-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0 0}
+.qp-card{background:var(--navy2);border:1px solid rgba(224,92,26,.2);border-top:3px solid var(--ember);padding:14px 12px;text-decoration:none;display:flex;flex-direction:column;gap:5px;transition:transform .15s,box-shadow .2s;position:relative}
+.qp-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(224,92,26,.2)}
+.qp-card:active{transform:scale(.98)}
+.qp-badge{position:absolute;top:8px;right:8px;font-family:'Share Tech Mono',monospace;font-size:.5rem;letter-spacing:.1em;background:var(--ember);color:#fff;padding:2px 6px;animation:badgePulse 2s ease-in-out infinite}
+@keyframes badgePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.qp-icon{font-size:1.4rem}
+.qp-name{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.05em;color:var(--white);line-height:1.1}
+.qp-desc{font-family:'Barlow',sans-serif;font-size:.66rem;font-weight:300;color:var(--dim);line-height:1.5;flex:1}
+.qp-btn{font-family:'Bebas Neue',sans-serif;font-size:.78rem;letter-spacing:.1em;color:var(--ember);margin-top:6px}
+.qp-divider{height:1px;background:rgba(224,92,26,.2);margin:28px 16px;max-width:900px;margin-left:auto;margin-right:auto}
+
+/* FILTER */
 .filter-wrap{position:sticky;top:54px;z-index:90;background:rgba(8,12,20,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 16px;overflow-x:auto;scrollbar-width:none}
 .filter-wrap::-webkit-scrollbar{display:none}
 .pill-row{display:flex;gap:8px;width:max-content}
 .pill{font-family:'Share Tech Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.2);padding:7px 14px;border-radius:2px;cursor:pointer;white-space:nowrap;transition:all .18s;-webkit-tap-highlight-color:transparent}
 .pill.active,.pill:active{background:var(--gold);color:#0b1017;border-color:var(--gold)}
+
+/* GEAR FEED */
 .feed{position:relative;z-index:1;max-width:680px;margin:0 auto;padding:20px 16px 80px;display:flex;flex-direction:column;gap:16px}
 .card{background:var(--navy2);border:1px solid rgba(212,175,55,.12);border-left:3px solid var(--gold);display:grid;grid-template-columns:110px 1fr;overflow:hidden;transition:border-color .2s,transform .15s;opacity:0;animation:slideIn .4s ease forwards}
 .card:nth-child(1){animation-delay:.05s}.card:nth-child(2){animation-delay:.10s}.card:nth-child(3){animation-delay:.15s}.card:nth-child(4){animation-delay:.20s}.card:nth-child(5){animation-delay:.25s}.card:nth-child(6){animation-delay:.30s}.card:nth-child(7){animation-delay:.35s}.card:nth-child(8){animation-delay:.40s}.card:nth-child(9){animation-delay:.45s}.card:nth-child(10){animation-delay:.50s}.card:nth-child(11){animation-delay:.55s}.card:nth-child(12){animation-delay:.60s}
@@ -46,10 +75,12 @@ nav{position:sticky;top:0;z-index:100;height:54px;display:flex;justify-content:s
 .card-quote{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-size:.68rem;color:rgba(212,175,55,.7);border-left:2px solid var(--copper);padding-left:8px;margin-bottom:10px;line-height:1.4;display:none}
 .card.expanded .card-quote{display:block}
 .card-actions{display:flex;gap:6px;align-items:center;margin-top:auto}
-.btn-expand{font-family:'Share Tech Mono',monospace;font-size:.48rem;letter-spacing:.1em;color:var(--teal);background:transparent;border:1px solid rgba(64,200,224,.3);padding:5px 8px;cursor:pointer;transition:all .2s;-webkit-tap-highlight-color:transparent}
+.btn-expand{font-family:'Share Tech Mono',monospace;font-size:.48rem;letter-spacing:.1em;color:var(--teal);background:transparent;border:1px solid rgba(64,200,224,.3);padding:5px 8px;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .btn-amz{display:flex;align-items:center;justify-content:center;gap:5px;font-family:'Bebas Neue',sans-serif;font-size:.82rem;letter-spacing:.1em;padding:7px 12px;background:var(--gold);color:#0b1017;text-decoration:none;flex:1;transition:background .15s;position:relative;overflow:hidden}
 .btn-amz::after{content:'';position:absolute;top:0;left:-120%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);animation:shine 3s infinite}
 .btn-amz:active{background:var(--gold2)}
+
+/* HOW */
 .how{position:relative;z-index:1;max-width:680px;margin:0 auto;padding:0 16px 60px}
 .how-div{height:1px;background:var(--line);margin-bottom:32px}
 .how-title{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.1em;color:var(--gold);margin-bottom:20px;text-align:center}
@@ -58,18 +89,33 @@ nav{position:sticky;top:0;z-index:100;height:54px;display:flex;justify-content:s
 .step-num{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:rgba(212,175,55,.2);line-height:1}
 .step-title{font-family:'Barlow Condensed',sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--white);margin-bottom:4px}
 .step-desc{font-family:'Barlow',sans-serif;font-size:.72rem;font-weight:300;color:var(--dim);line-height:1.55}
-.float-gear{position:fixed;bottom:18px;right:18px;z-index:999;background:var(--gold);color:#0b1017;padding:12px 18px;font-family:'Bebas Neue',sans-serif;font-size:.88rem;letter-spacing:.12em;text-decoration:none;border-radius:50px;box-shadow:0 6px 22px rgba(212,175,55,.5);display:flex;align-items:center;gap:6px;animation:floatBounce 2.2s ease-in-out infinite}
-.float-blog{position:fixed;bottom:18px;left:18px;z-index:999;background:linear-gradient(135deg,#40C8E0,#1a8fa8);color:#0a0f18;padding:12px 18px;font-family:'Bebas Neue',sans-serif;font-size:.88rem;letter-spacing:.12em;text-decoration:none;border-radius:50px;box-shadow:0 6px 22px rgba(64,200,224,.5);display:flex;align-items:center;gap:6px;animation:blogBounce 2.6s ease-in-out infinite}
+
+/* FLOATERS */
+.float-blog{position:fixed;bottom:18px;left:18px;z-index:999;background:linear-gradient(135deg,#40C8E0,#1a8fa8);color:#0a0f18;padding:12px 18px;font-family:'Bebas Neue',sans-serif;font-size:.88rem;letter-spacing:.12em;text-decoration:none;border-radius:50px;box-shadow:0 6px 22px rgba(64,200,224,.5);animation:blogBounce 2.6s ease-in-out infinite}
+.float-home{position:fixed;bottom:18px;right:18px;z-index:999;background:var(--gold);color:#0b1017;padding:12px 18px;font-family:'Bebas Neue',sans-serif;font-size:.88rem;letter-spacing:.12em;text-decoration:none;border-radius:50px;box-shadow:0 6px 22px rgba(212,175,55,.5);animation:floatBounce 2.2s ease-in-out infinite}
+@keyframes floatBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes blogBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+/* FOOTER */
 footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px 20px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
 .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.14em;color:var(--gold);text-decoration:none}
 .footer-links{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
 .footer-links a{font-family:'Share Tech Mono',monospace;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-decoration:none}
 .footer-copy{font-family:'Share Tech Mono',monospace;font-size:.5rem;letter-spacing:.08em;color:rgba(200,191,160,.3);line-height:1.6}
+
+/* ANIMATIONS */
 @keyframes slideIn{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:translateX(0)}}
 @keyframes shine{0%{left:-120%}100%{left:140%}}
-@keyframes floatBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-@keyframes blogBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-@media(min-width:600px){.card{grid-template-columns:130px 1fr}.card-img{width:130px;min-height:130px}.card-name{font-size:1.25rem}.how-steps{flex-direction:row}.how-step{flex:1}}
+
+/* DESKTOP */
+@media(min-width:600px){
+  .card{grid-template-columns:130px 1fr}
+  .card-img{width:130px;min-height:130px}
+  .card-name{font-size:1.25rem}
+  .qp-grid{grid-template-columns:repeat(4,1fr);gap:12px}
+  .how-steps{flex-direction:row}
+  .how-step{flex:1}
+}
 </style>
 </head>
 <body>
@@ -78,7 +124,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px
   <div class="nav-links">
     <a href="https://minearworks.com">Home</a>
     <a href="https://minearworks.com/blog-index.html">Blog</a>
-    <a href="gear.html" class="active">Gear</a>
+    <a href="shop.html" class="active">Shop</a>
     <a href="https://minearworks.com/#books">Books</a>
     <a href="mailto:MinearWorks@gmail.com">Contact</a>
   </div>
@@ -89,8 +135,87 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px
   <h1>Gear Doug<br><em>Actually Uses</em></h1>
   <p class="hero-sub">Tools tested on real jobs. Not a showroom, not a spec sheet. Field experience only.</p>
   <div class="hero-line"></div>
-  <p class="disclaimer">Amazon Associate — tap any card for Doug's full take · clicking View on Amazon earns MinearWorks a small commission at no cost to you</p>
+  <p class="disclaimer">Amazon Associate — tap any card for Doug's full take · buying through links earns MinearWorks a small commission at no cost to you</p>
 </div>
+
+<!-- ══ QUICK PICKS — UNDER $25 ══ -->
+<div class="qp-section" id="quick-picks">
+  <div class="qp-header">
+    <p class="qp-tag">// Fast Buys · All Under $25</p>
+    <h2 class="qp-title">Quick <em>Picks</em></h2>
+    <p class="qp-sub">Field essentials. Low price. Impulse-buy worthy. Every tradesperson needs these.</p>
+    <div class="qp-line"></div>
+  </div>
+  <div class="qp-grid">
+
+    <a class="qp-card" href="https://www.amazon.com/dp/B0D146WR7L?tag=minearworks-20" target="_blank" rel="noopener">
+      <div class="qp-badge">~$10</div>
+      <div class="qp-icon">🔀</div>
+      <div class="qp-name">Wire Twister for Drill</div>
+      <div class="qp-desc">2-pack. Twist wire nuts in seconds with your drill. Every electrician's best shortcut.</div>
+      <div class="qp-btn">View on Amazon ↗</div>
+    </a>
+
+    <a class="qp-card" href="https://www.amazon.com/dp/B099SJ6469?tag=minearworks-20" target="_blank" rel="noopener">
+      <div class="qp-badge">~$15</div>
+      <div class="qp-icon">⚡</div>
+      <div class="qp-name">Klein NCVT1P Voltage Tester</div>
+      <div class="qp-desc">Non-contact. 50–1000V. Beeps red when live. Klein quality at pocket-money price.</div>
+      <div class="qp-btn">View on Amazon ↗</div>
+    </a>
+
+    <a class="qp-card" href="https://www.amazon.com/dp/B078F6PBH1?tag=minearworks-20" target="_blank" rel="noopener">
+      <div class="qp-badge">~$12</div>
+      <div class="qp-icon">🧲</div>
+      <div class="qp-name">Magnetic Tool Wristband</div>
+      <div class="qp-desc">20 magnets. Holds screws, bits, nuts while your hands work. Every tradesperson ends up with one.</div>
+      <div class="qp-btn">View on Amazon ↗</div>
+    </a>
+
+    <a class="qp-card" href="https://www.amazon.com/dp/B07W3DBL5M?tag=minearworks-20" target="_blank" rel="noopener">
+      <div class="qp-badge">~$18</div>
+      <div class="qp-icon">🔍</div>
+      <div class="qp-name">AmazonCommercial Voltage Tester</div>
+      <div class="qp-desc">IP67, 2m drop proof, dual range, flashlight built in. The backup tester that lives in your bag.</div>
+      <div class="qp-btn">View on Amazon ↗</div>
+    </a>
+
+    <a class="qp-card" href="https://www.amazon.com/dp/B07WCVQHQS?tag=minearworks-20" target="_blank" rel="noopener">
+      <div class="qp-badge">~$10</div>
+      <div class="qp-icon">🎁</div>
+      <div class="qp-name">BINYATOOLS Magnetic Wristband</div>
+      <div class="qp-desc">9 neodymium magnets, wrist support, thumb loop. Best gift for any tradesperson on your list.</div>
+      <div class="qp-btn">View on Amazon ↗</div>
+    </a>
+
+    <a class="qp-card" href="https://www.amazon.com/dp/B000EJ3UQQ?tag=minearworks-20" target="_blank" rel="noopener">
+      <div class="qp-badge">~$25</div>
+      <div class="qp-icon">🔶</div>
+      <div class="qp-name">Fluke 1AC VoltAlert Tester</div>
+      <div class="qp-desc">The Fluke you keep in your shirt pocket. CAT IV 1000V, self-testing, tip glows on detection.</div>
+      <div class="qp-btn">View on Amazon ↗</div>
+    </a>
+
+    <a class="qp-card" href="https://www.amazon.com/dp/B0CYGSFR63?tag=minearworks-20" target="_blank" rel="noopener">
+      <div class="qp-badge">~$12</div>
+      <div class="qp-icon">✂️</div>
+      <div class="qp-name">Wire Stripper & Twister Set</div>
+      <div class="qp-desc">Strips AND twists in 3 seconds with a drill. 8-in-1. The upgrade your rough-in workflow needs.</div>
+      <div class="qp-btn">View on Amazon ↗</div>
+    </a>
+
+    <a class="qp-card" href="https://www.amazon.com/dp/B0D11614K7?tag=minearworks-20" target="_blank" rel="noopener">
+      <div class="qp-badge">~$8</div>
+      <div class="qp-icon">🔧</div>
+      <div class="qp-name">Ruri's Wire Twister 2-Pack</div>
+      <div class="qp-desc">2-pack wire nut twisters for drill. 9–22 AWG. The cheapest upgrade on this entire page.</div>
+      <div class="qp-btn">View on Amazon ↗</div>
+    </a>
+
+  </div>
+</div>
+
+<div class="qp-divider"></div>
 
 <div class="filter-wrap">
   <div class="pill-row">
@@ -104,13 +229,12 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px
 
 <div class="feed" id="feed">
 
-  <!-- 1 ACES Insulated Kit -->
   <div class="card" data-cat="electrical" onclick="toggle(this)">
-    <div class="card-img"><img src="aces-kit.jpg" alt="ACES Insulated Tool Kit" onerror="this.style.opacity='.3'"></div>
+    <div class="card-img"><img src="aces-kit.jpg" alt="ACES Insulated Tool Kit" onerror="this.style.opacity='.2'"></div>
     <div class="card-body">
       <div class="card-cat">// Electrical · Safety</div>
       <div class="card-name">ACES Insulated Electrician Kit 14pc</div>
-      <div class="card-desc">1000V rated, VDE/GS certified. Pliers, screwdrivers, voltage tester — everything in one case. The safe loadout for energized work.</div>
+      <div class="card-desc">1000V rated, VDE/GS certified. Pliers, screwdrivers, voltage tester in one case. The safe loadout for energized work.</div>
       <div class="card-quote">"Insulated tools are not optional on energized work. This kit gets you there without guessing."</div>
       <div class="card-actions">
         <button class="btn-expand">+ Details</button>
@@ -119,9 +243,8 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px
     </div>
   </div>
 
-  <!-- 2 Klein Backpack -->
   <div class="card" data-cat="electrical tools" onclick="toggle(this)">
-    <div class="card-img"><img src="klein-backpack.jpg" alt="Klein Tools Backpack Set" onerror="this.style.opacity='.3'"></div>
+    <div class="card-img"><img src="klein-backpack.jpg" alt="Klein Tools Backpack Set" onerror="this.style.opacity='.2'"></div>
     <div class="card-body">
       <div class="card-cat">// Electrical · Hand Tools</div>
       <div class="card-name">Klein Tools 80028 Backpack Set 28pc</div>
@@ -134,13 +257,12 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px
     </div>
   </div>
 
-  <!-- 3 Fieldpiece SOX3 -->
   <div class="card" data-cat="boiler" onclick="toggle(this)">
-    <div class="card-img"><img src="fieldpiece-sox3.jpg" alt="Fieldpiece SOX3" onerror="this.style.opacity='.3'"></div>
+    <div class="card-img"><img src="fieldpiece-sox3.jpg" alt="Fieldpiece SOX3" onerror="this.style.opacity='.2'"></div>
     <div class="card-body">
       <div class="card-cat">// Boiler &amp; Steam</div>
       <div class="card-name">Fieldpiece SOX3 Combustion Analyzer</div>
-      <div class="card-desc">Measures excess air, %CO, %O₂, and stack temp simultaneously. Natural gas, oil, propane, custom fuel. Stops burner tuning from being a guessing game.</div>
+      <div class="card-desc">Measures excess air, %CO, %O₂, and stack temp simultaneously. Natural gas, oil, propane. Stops burner tuning from being a guessing game.</div>
       <div class="card-quote">"You can't tune what you can't measure. This is where the guesswork ends."</div>
       <div class="card-actions">
         <button class="btn-expand">+ Details</button>
@@ -149,14 +271,13 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px
     </div>
   </div>
 
-  <!-- 4 VOLTCLAW -->
   <div class="card" data-cat="electrical" onclick="toggle(this)">
-    <div class="card-img"><img src="voltclaw.jpg" alt="VOLTCLAW Combo Pack" onerror="this.style.opacity='.3'"></div>
+    <div class="card-img"><img src="voltclaw.jpg" alt="VOLTCLAW Combo Pack" onerror="this.style.opacity='.2'"></div>
     <div class="card-body">
       <div class="card-cat">// Electrical</div>
       <div class="card-name">VOLTCLAW Combo Pack — 12GA + Multi-Gauge</div>
       <div class="card-desc">Nonconductive wire pullers. Hook, turn, and pull conductors in boxes without touching live wires. Made in USA. Once you use one, you don't go back.</div>
-      <div class="card-quote">"The tool that makes device rough-in faster and safer. No explanation needed after the first time."</div>
+      <div class="card-quote">"Makes device rough-in faster and safer. No explanation needed after the first time."</div>
       <div class="card-actions">
         <button class="btn-expand">+ Details</button>
         <a class="btn-amz" href="https://www.amazon.com/dp/B01FJ14PM8?tag=minearworks-20" target="_blank" rel="noopener" onclick="event.stopPropagation()">View on Amazon ↗</a>
@@ -164,9 +285,8 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px
     </div>
   </div>
 
-  <!-- 5 Klein 80080 -->
   <div class="card" data-cat="electrical tools" onclick="toggle(this)">
-    <div class="card-img"><img src="klein-80080.jpg" alt="Klein Tools 80080" onerror="this.style.opacity='.3'"></div>
+    <div class="card-img"><img src="klein-80080.jpg" alt="Klein Tools 80080" onerror="this.style.opacity='.2'"></div>
     <div class="card-body">
       <div class="card-cat">// Electrical · Hand Tools</div>
       <div class="card-name">Klein Tools 80080 Starter Set 6pc</div>
@@ -179,14 +299,13 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px
     </div>
   </div>
 
-  <!-- 6 Milwaukee M18 -->
-  <div class="card" data-cat="power tools" onclick="toggle(this)">
-    <div class="card-img"><img src="milwaukee-m18.jpg" alt="Milwaukee M18 Combo Kit" onerror="this.style.opacity='.3'"></div>
+  <div class="card" data-cat="power" onclick="toggle(this)">
+    <div class="card-img"><img src="milwaukee-m18.jpg" alt="Milwaukee M18 Combo Kit" onerror="this.style.opacity='.2'"></div>
     <div class="card-body">
       <div class="card-cat">// Power Tools</div>
       <div class="card-name">Milwaukee M18 Drill + Impact Combo Kit</div>
-      <div class="card-desc">Brushless drill/driver and impact driver, two batteries, charger, bag. On every commercial jobsite in the country. Brushless means more torque, longer run time. If you're buying one cordless kit, this is the one you don't regret.</div>
-      <div class="card-quote">"The combo that's on every commercial job in the country. Buy it once."</div>
+      <div class="card-desc">Brushless drill/driver and impact driver, two batteries, charger, bag. On every commercial jobsite in the country. Buy it once.</div>
+      <div class="card-quote">"The combo that's on every commercial job in the country."</div>
       <div class="card-actions">
         <button class="btn-expand">+ Details</button>
         <a class="btn-amz" href="https://www.amazon.com/dp/B011BWB68A?tag=minearworks-20" target="_blank" rel="noopener" onclick="event.stopPropagation()">View on Amazon ↗</a>
@@ -194,13 +313,12 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px
     </div>
   </div>
 
-  <!-- 7 Lenox Hole Saw -->
   <div class="card" data-cat="electrical tools" onclick="toggle(this)">
-    <div class="card-img"><img src="lenox-holesaw.jpg" alt="Lenox Hole Saw Kit" onerror="this.style.opacity='.3'"></div>
+    <div class="card-img"><img src="lenox-holesaw.jpg" alt="Lenox Hole Saw Kit" onerror="this.style.opacity='.2'"></div>
     <div class="card-body">
       <div class="card-cat">// Electrical · Hand Tools</div>
       <div class="card-name">Lenox Bi-Metal Hole Saw Kit 13pc</div>
-      <div class="card-desc">13 bi-metal hole saws in a hard case. Every panel knockout, junction box rough-in, and conduit penetration covered. Cuts cleaner and lasts longer than the no-name sets.</div>
+      <div class="card-desc">13 bi-metal hole saws in a hard case. Every panel knockout, junction box rough-in, and conduit penetration covered. Cuts cleaner and lasts longer.</div>
       <div class="card-quote">"Buy it once. That's the whole argument."</div>
       <div class="card-actions">
         <button class="btn-expand">+ Details</button>
@@ -209,14 +327,13 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px
     </div>
   </div>
 
-  <!-- 8 Wire Tub -->
   <div class="card" data-cat="electrical" onclick="toggle(this)">
-    <div class="card-img"><img src="wire-tub.jpg" alt="Rack-A-Tiers Wire Tub" onerror="this.style.opacity='.3'"></div>
+    <div class="card-img"><img src="wire-tub.jpg" alt="Rack-A-Tiers Wire Tub" onerror="this.style.opacity='.2'"></div>
     <div class="card-body">
       <div class="card-cat">// Electrical</div>
       <div class="card-name">Rack-A-Tiers Wire Tub</div>
-      <div class="card-desc">Drop a coil of wire in, pull from the center, zero tangles. Made in Canada. The tool you didn't know you needed until the first time you used one on a rough-in.</div>
-      <div class="card-quote">"Every electrician who's fought a kinking coil of Romex understands immediately why this exists."</div>
+      <div class="card-desc">Drop a coil of wire in, pull from the center, zero tangles. Made in Canada. The tool you didn't know you needed until the first time you used one.</div>
+      <div class="card-quote">"Every electrician who's fought a kinking coil of Romex understands immediately."</div>
       <div class="card-actions">
         <button class="btn-expand">+ Details</button>
         <a class="btn-amz" href="https://www.amazon.com/dp/B0087TBRI0?tag=minearworks-20" target="_blank" rel="noopener" onclick="event.stopPropagation()">View on Amazon ↗</a>
@@ -224,13 +341,12 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px
     </div>
   </div>
 
-  <!-- 9 Croc's Jr -->
   <div class="card" data-cat="electrical tools" onclick="toggle(this)">
-    <div class="card-img"><img src="crocs-jr.jpg" alt="Rack-A-Tiers Croc's Jr" onerror="this.style.opacity='.3'"></div>
+    <div class="card-img"><img src="crocs-jr.jpg" alt="Croc's Jr Wire Stripper" onerror="this.style.opacity='.2'"></div>
     <div class="card-body">
       <div class="card-cat">// Electrical</div>
       <div class="card-name">Rack-A-Tiers Croc's Jr. Wire Stripper</div>
-      <div class="card-desc">Strips 8–22 AWG, cuts 8-32 and 6-32 bolts, needle-nose tips, glow-in-the-dark handles for when the lights go out in the ceiling. Pocket-sized.</div>
+      <div class="card-desc">Strips 8–22 AWG, cuts 8-32 and 6-32 bolts, needle-nose tips, glow-in-the-dark handles. Pocket-sized.</div>
       <div class="card-quote">"Solves real field problems nobody else thought to fix."</div>
       <div class="card-actions">
         <button class="btn-expand">+ Details</button>
@@ -239,14 +355,13 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px
     </div>
   </div>
 
-  <!-- 10 Staple Shark -->
   <div class="card" data-cat="electrical tools" onclick="toggle(this)">
-    <div class="card-img"><img src="staple-shark.jpg" alt="Rack-A-Tiers Staple Shark" onerror="this.style.opacity='.3'"></div>
+    <div class="card-img"><img src="staple-shark.jpg" alt="Rack-A-Tiers Staple Shark" onerror="this.style.opacity='.2'"></div>
     <div class="card-body">
       <div class="card-cat">// Electrical · Hand Tools</div>
       <div class="card-name">Rack-A-Tiers Staple Shark</div>
-      <div class="card-desc">Removes wire staples without shredding cable sheathing. Also a nail puller, pry bar, ruler, carpenter's square, and bottle opener. Pays for itself the first demo job.</div>
-      <div class="card-quote">"Re-route Romex on a demo job without destroying it. That's the pitch. That's the whole pitch."</div>
+      <div class="card-desc">Removes wire staples without shredding cable sheathing. Nail puller, pry bar, ruler, carpenter's square, bottle opener. Pays for itself the first demo job.</div>
+      <div class="card-quote">"Re-route Romex on a demo job without destroying it. That's the pitch."</div>
       <div class="card-actions">
         <button class="btn-expand">+ Details</button>
         <a class="btn-amz" href="https://www.amazon.com/dp/B0087TBOGK?tag=minearworks-20" target="_blank" rel="noopener" onclick="event.stopPropagation()">View on Amazon ↗</a>
@@ -254,14 +369,13 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px
     </div>
   </div>
 
-  <!-- 11 SAKE 42pc Bit Set -->
   <div class="card" data-cat="tools" onclick="toggle(this)">
-    <div class="card-img"><img src="sake-bit-set.jpg" alt="SAKE 42pc Screwdriver Bit Set" onerror="this.style.opacity='.3'"></div>
+    <div class="card-img"><img src="sake-bit-set.jpg" alt="SAKE 42pc Bit Set" onerror="this.style.opacity='.2'"></div>
     <div class="card-body">
       <div class="card-cat">// Hand Tools</div>
       <div class="card-name">SAKE 42pc Screwdriver Bit Set + T-Handle</div>
-      <div class="card-desc">42 bits — Phillips, slotted, Torx, hex — color-coded, organized case, T-handle and ratchet driver included. Every fastener you'll find in a panel, device, or enclosure covered in one box.</div>
-      <div class="card-quote">"The bit set that ends the hunt. Color-coded so you grab the right one the first time."</div>
+      <div class="card-desc">42 bits — Phillips, slotted, Torx, hex — color-coded, organized case, T-handle and ratchet driver included. Every fastener covered in one box.</div>
+      <div class="card-quote">"Color-coded so you grab the right one the first time."</div>
       <div class="card-actions">
         <button class="btn-expand">+ Details</button>
         <a class="btn-amz" href="https://www.amazon.com/dp/B0DK8WSQPF?tag=minearworks-20" target="_blank" rel="noopener" onclick="event.stopPropagation()">View on Amazon ↗</a>
@@ -269,14 +383,13 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px
     </div>
   </div>
 
-  <!-- 12 Digital Caliper -->
   <div class="card" data-cat="tools boiler" onclick="toggle(this)">
-    <div class="card-img"><img src="digital-caliper.jpg" alt="Digital Caliper 6 inch" onerror="this.style.opacity='.3'"></div>
+    <div class="card-img"><img src="digital-caliper.jpg" alt="Digital Caliper" onerror="this.style.opacity='.2'"></div>
     <div class="card-body">
       <div class="card-cat">// Hand Tools · Boiler &amp; Steam</div>
       <div class="card-name">Digital Caliper — 6" Stainless, Inch/MM</div>
-      <div class="card-desc">Measures pipe OD, tube wall thickness, fitting dimensions, and clearances to 0.001" accuracy. Stainless steel body, digital readout, instant inch/mm switch. The caliper that belongs in every stationary engineer's toolbox.</div>
-      <div class="card-quote">"Precision measurement isn't optional when you're fitting pipe. This gets you there without guessing."</div>
+      <div class="card-desc">Measures pipe OD, tube wall thickness, fitting dimensions to 0.001" accuracy. Stainless steel, instant inch/mm switch. Every stationary engineer's toolbox needs one.</div>
+      <div class="card-quote">"Precision measurement isn't optional when you're fitting pipe."</div>
       <div class="card-actions">
         <button class="btn-expand">+ Details</button>
         <a class="btn-amz" href="https://www.amazon.com/dp/B087N5N45G?tag=minearworks-20" target="_blank" rel="noopener" onclick="event.stopPropagation()">View on Amazon ↗</a>
@@ -307,7 +420,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px
 </footer>
 
 <a class="float-blog" href="https://minearworks.com/blog-index.html">📖 Field Notes</a>
-<a class="float-gear" href="https://minearworks.com">🏠 MinearWorks</a>
+<a class="float-home" href="https://minearworks.com">🏠 MinearWorks</a>
 
 <script>
 function filter(cat,btn){
